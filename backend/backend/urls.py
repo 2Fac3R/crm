@@ -19,6 +19,7 @@ from crm.views.api import UserApiView as user_views
 from crm.views.api import GroupApiView as group_views
 from crm.views.api import OrganizationApiView as organization_views
 from crm.views.api import ProjectApiView as project_views
+from crm.views.api import ContactApiView as contact_views
 
 # Routing
 router = routers.DefaultRouter()
@@ -28,6 +29,8 @@ router.register(r'organizations',
                 organization_views.OrganizationViewSet, basename='organization')
 router.register(r'projects',
                 project_views.ProjectViewSet, basename='project')
+router.register(r'contacts',
+                contact_views.ContactViewSet, basename='contact')
 
 # API Conf
 schema_view = get_schema_view(

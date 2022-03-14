@@ -35,9 +35,9 @@ class ProjectAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('city', 'first_name', 'organization')
-    list_filter = ('country', 'organization', )
-    search_fields = ('first_name', 'last_name')
+    list_display = ('first_name', 'last_name', 'organization', 'email', 'phone')
+    list_filter = ('organization', 'country', 'city')
+    search_fields = ('first_name', 'last_name', 'email', 'phone')
 
 
 @admin.register(Meeting)
