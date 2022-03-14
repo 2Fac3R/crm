@@ -2,14 +2,14 @@
 
 # Django
 from django.db import models
-from django.urls import reverse # To generate URLS by reversing URL patterns
+from django.urls import reverse  # To generate URLS by reversing URL patterns
 
-from . import Organization  
+# CRM
+from . import Organization
 
 
 class Contact(models.Model):
     """Model representing a Contact"""
-    
     organization = models.ForeignKey(Organization, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=25)
     last_name = models.CharField(max_length=25)
@@ -20,7 +20,7 @@ class Contact(models.Model):
     region = models.CharField(max_length=50)
     country = models.CharField(max_length=2)
     postal_code = models.CharField(max_length=25)
-    
+
     def __str__(self):
         """String for representing the Model object (in Admin site etc.)"""
         return self.first_name

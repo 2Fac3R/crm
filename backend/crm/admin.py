@@ -25,17 +25,20 @@ class OrganizationAdmin(admin.ModelAdmin):
     list_filter = ('country', 'city')
     search_fields = ('name', 'phone')
 
+
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name', 'organization')
-    list_filter = ['organization',]
+    list_filter = ['organization', ]
     search_fields = ('name', 'description')
+
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('city', 'first_name', 'organization')
     list_filter = ('country', 'organization', )
     search_fields = ('first_name', 'last_name', 'organization')
+
 
 @admin.register(Meeting)
 class MeetingAdmin(admin.ModelAdmin):
