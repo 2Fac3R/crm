@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
 
-# Catalog
+# CRM
 from .models import Organization, Project, Contact, Meeting
 
 
@@ -35,7 +35,8 @@ class ProjectAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'organization', 'email', 'phone')
+    list_display = ('first_name', 'last_name',
+                    'organization', 'email', 'phone')
     list_filter = ('organization', 'country', 'city')
     search_fields = ('first_name', 'last_name', 'email', 'phone')
 
