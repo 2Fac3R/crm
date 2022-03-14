@@ -33,7 +33,7 @@ router.register(r'projects',
 router.register(r'contacts',
                 contact_views.ContactViewSet, basename='contact')
 router.register(r'meetings',
-                meeting_views.MeetingViewSet, basename='contact')
+                meeting_views.MeetingViewSet, basename='meetings')
 
 # API Conf
 schema_view = get_schema_view(
