@@ -2,8 +2,8 @@
 
 # Django
 from django.urls import path, re_path, include
-from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 
 # Django Rest Framework
@@ -18,6 +18,7 @@ from drf_yasg.views import get_schema_view
 from crm.views.api import UserApiView as user_views
 from crm.views.api import GroupApiView as group_views
 from crm.views.api import OrganizationApiView as organization_views
+from crm.views.api import ProjectApiView as project_views
 
 # Routing
 router = routers.DefaultRouter()
@@ -25,6 +26,8 @@ router.register(r'users', user_views.UserViewSet, basename='user')
 router.register(r'groups', group_views.GroupViewSet, basename='group')
 router.register(r'organizations',
                 organization_views.OrganizationViewSet, basename='organization')
+router.register(r'projects',
+                project_views.ProjectViewSet, basename='project')
 
 # API Conf
 schema_view = get_schema_view(

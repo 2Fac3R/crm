@@ -37,11 +37,11 @@ class ProjectAdmin(admin.ModelAdmin):
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('city', 'first_name', 'organization')
     list_filter = ('country', 'organization', )
-    search_fields = ('first_name', 'last_name', 'organization')
+    search_fields = ('first_name', 'last_name')
 
 
 @admin.register(Meeting)
 class MeetingAdmin(admin.ModelAdmin):
     list_display = ('title', 'date', 'project')
     list_filter = ('contact', 'date', 'project')
-    search_fields = ('contact', 'title', 'project')
+    search_fields = ('title', 'date')

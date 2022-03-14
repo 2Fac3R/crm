@@ -21,6 +21,6 @@ class OrganizationViewSet(viewsets.ModelViewSet):
 
     # Filters
     filter_backends = (SearchFilter, OrderingFilter, DjangoFilterBackend)
-    ordering_fields = ['name']  # '__all__'
+    ordering_fields = ['name', ]  # '__all__'
     filter_fields = ('country', 'city')
     search_fields = ('name', 'phone')
