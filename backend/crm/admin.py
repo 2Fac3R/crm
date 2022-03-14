@@ -42,6 +42,6 @@ class ContactAdmin(admin.ModelAdmin):
 
 @admin.register(Meeting)
 class MeetingAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date', 'project')
-    list_filter = ('contact', 'date', 'project')
-    search_fields = ('title', 'date')
+    list_display = ('title', 'date', 'project', 'contact')
+    list_filter = ('project', 'contact', 'date')
+    search_fields = ('title', 'description')
