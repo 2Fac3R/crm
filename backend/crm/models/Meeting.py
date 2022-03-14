@@ -18,7 +18,7 @@ class Meeting(models.Model):
     
     def __str__(self):
         """String for representing the Model object (in Admin site etc.)"""
-        return self.name
+        return self.title
 
     def get_absolute_url(self):
         """Returns the url to access a particular Meeting instance."""
