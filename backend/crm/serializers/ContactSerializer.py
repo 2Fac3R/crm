@@ -1,10 +1,10 @@
-""" Contact Serializer."""
-
-# Django
-from crm.models import Contact
+"""Contact Serializer."""
 
 # Django Rest Framework
 from rest_framework import serializers
+
+# CRM
+from crm.models import Contact
 
 
 class ContactSerializer(serializers.HyperlinkedModelSerializer):

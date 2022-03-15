@@ -1,10 +1,10 @@
-""" Project Serializer."""
-
-# Django
-from crm.models import Project
+"""Project Serializer."""
 
 # Django Rest Framework
 from rest_framework import serializers
+
+# CRM
+from crm.models import Project
 
 
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):

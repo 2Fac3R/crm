@@ -1,10 +1,10 @@
-""" Meeting Serializer."""
-
-# Django
-from crm.models import Meeting
+"""Meeting Serializer."""
 
 # Django Rest Framework
 from rest_framework import serializers
+
+# CRM
+from crm.models import Meeting
 
 
 class MeetingSerializer(serializers.HyperlinkedModelSerializer):
