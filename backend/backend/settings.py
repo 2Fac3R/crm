@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',  # Django Rest Framework
     'corsheaders',  # django-cors-headers - Adds CORS headers to responses
     'drf_yasg',  # drf-yasg - Yet another Swagger generator
+    'rest_framework_simplejwt',  # djangorestframework-simplejwt - JSON Web Token
 ]
 
 LOCAL_APPS = [
@@ -139,6 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 15

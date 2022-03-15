@@ -10,6 +10,13 @@ from django.contrib import admin
 from rest_framework import routers
 from rest_framework import permissions
 
+# JWT - JSON Web Token
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+    TokenVerifyView,
+)
+
 # drf-yasg - Yet another Swagger generator
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
@@ -65,4 +72,8 @@ urlpatterns = [
          cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc',
          cache_timeout=0), name='schema-redoc'),
+    # JWT - JSON Web Token
+    path('api/v1/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/v1/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/v1/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
