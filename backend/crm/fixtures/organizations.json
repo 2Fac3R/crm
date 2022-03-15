@@ -1,0 +1,128 @@
+[
+  {
+    "model": "crm.organization",
+    "pk": 1,
+    "fields": {
+      "name": "Bauer and Sons",
+      "email": "brettwilliams@hill.biz",
+      "phone": "014-046-9376x515",
+      "address": "25260 Jimenez Glen",
+      "city": "Wrightbury",
+      "region": "Utah",
+      "country": "BS",
+      "postal_code": "34201"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 2,
+    "fields": {
+      "name": "Fuller, White and Byrd",
+      "email": "penahenry@taylor.com",
+      "phone": "(616)235-8641x8875",
+      "address": "771 John Unions Apt. 677",
+      "city": "North Christineview",
+      "region": "California",
+      "country": "AD",
+      "postal_code": "40144"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 3,
+    "fields": {
+      "name": "Blankenship, Davis and Gray",
+      "email": "popesamuel@russell.com",
+      "phone": "+1-598-933-4184",
+      "address": "853 Bryan Mill Apt. 800",
+      "city": "Greenborough",
+      "region": "Mississippi",
+      "country": "SZ",
+      "postal_code": "28827"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 4,
+    "fields": {
+      "name": "Davis-Adams",
+      "email": "angelicayoung@jackson-ward.com",
+      "phone": "(963)521-0635x4487",
+      "address": "520 Ronald Plains",
+      "city": "South John",
+      "region": "Kansas",
+      "country": "BR",
+      "postal_code": "42752"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 5,
+    "fields": {
+      "name": "Lee and Sons",
+      "email": "kenneth25@wallace-sanchez.com",
+      "phone": "626-614-4667",
+      "address": "096 Kimberly Forge",
+      "city": "Masseyborough",
+      "region": "Connecticut",
+      "country": "MC",
+      "postal_code": "16558"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 6,
+    "fields": {
+      "name": "Carpenter-Haynes",
+      "email": "olsonmichael@davis-luna.com",
+      "phone": "(723)110-5013",
+      "address": "47259 Kara Freeway Apt. 324",
+      "city": "West Ricardomouth",
+      "region": "Tennessee",
+      "country": "VU",
+      "postal_code": "22158"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 7,
+    "fields": {
+      "name": "Mcguire-Carroll",
+      "email": "mlong@white.com",
+      "phone": "1329869010",
+      "address": "340 Jessica Prairie Suite 723",
+      "city": "Walshborough",
+      "region": "Vermont",
+      "country": "RO",
+      "postal_code": "71415"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 8,
+    "fields": {
+      "name": "Chandler, Johnson and Holmes",
+      "email": "annaeverett@li.net",
+      "phone": "001-454-967-1056x370",
+      "address": "7255 Sarah Plains Suite 733",
+      "city": "Port Daniel",
+      "region": "Arizona",
+      "country": "GY",
+      "postal_code": "24298"
+    }
+  },
+  {
+    "model": "crm.organization",
+    "pk": 9,
+    "fields": {
+      "name": "Mendez Group",
+      "email": "fred25@lowe.com",
+      "phone": "660.238.8903",
+      "address": "2007 Mercado Station",
+      "city": "Melindaborough",
+      "region": "Ohio",
+      "country": "BH",
+      "postal_code": "20030"
+    }
+  }
+]
