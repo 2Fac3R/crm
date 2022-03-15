@@ -1,7 +1,7 @@
 """Meeting API View"""
 
 # Django Rest Framework
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 
 # Filters
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -18,6 +18,7 @@ class MeetingViewSet(viewsets.ModelViewSet):
     """
     queryset = Meeting.objects.all().order_by('title')
     serializer_class = MeetingSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
     # Filters
     filter_backends = (SearchFilter, OrderingFilter, DjangoFilterBackend)

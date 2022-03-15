@@ -1,7 +1,7 @@
 """Organization API View"""
 
 # Django Rest Framework
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 
 # Filters
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -18,6 +18,7 @@ class OrganizationViewSet(viewsets.ModelViewSet):
     """
     queryset = Organization.objects.all().order_by('name')
     serializer_class = OrganizationSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
     # Filters
     filter_backends = (SearchFilter, OrderingFilter, DjangoFilterBackend)

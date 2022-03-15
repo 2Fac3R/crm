@@ -1,7 +1,7 @@
 """Contact API View"""
 
 # Django Rest Framework
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 
 # Filters
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -18,6 +18,7 @@ class ContactViewSet(viewsets.ModelViewSet):
     """
     queryset = Contact.objects.all().order_by('last_name')
     serializer_class = ContactSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
     # Filters
     filter_backends = (SearchFilter, OrderingFilter, DjangoFilterBackend)
