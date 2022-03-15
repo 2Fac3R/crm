@@ -24,6 +24,7 @@ class OrganizationAdmin(admin.ModelAdmin):
     list_display = ('name', 'city', 'phone')
     list_filter = ('country', 'city')
     search_fields = ('name', 'phone')
+    list_per_page = 15
 
 
 @admin.register(Project)
@@ -31,6 +32,7 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name', 'organization')
     list_filter = ['organization', ]
     search_fields = ('name', 'description')
+    list_per_page = 15
 
 
 @admin.register(Contact)
@@ -39,10 +41,12 @@ class ContactAdmin(admin.ModelAdmin):
                     'organization', 'email', 'phone')
     list_filter = ('organization', 'country', 'city')
     search_fields = ('first_name', 'last_name', 'email', 'phone')
+    list_per_page = 15
 
 
 @admin.register(Meeting)
 class MeetingAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date', 'project', 'contact')
+    list_display = ('title', 'date', 'project')
     list_filter = ('project', 'contact', 'date')
     search_fields = ('title', 'description')
+    list_per_page = 20
