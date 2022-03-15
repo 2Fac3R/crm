@@ -42,7 +42,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',  # Django Rest Framework
-    'corsheaders',  # django-cors-headers
+    'corsheaders',  # django-cors-headers - Adds CORS headers to responses
     'drf_yasg',  # drf-yasg - Yet another Swagger generator
 ]
 

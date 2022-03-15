@@ -10,5 +10,5 @@ from rest_framework import serializers
 class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Organization
-        fields = ['url', 'name', 'email', 'phone', 'address',
+        fields = ['id', 'url', 'name', 'email', 'phone', 'address',
                   'city', 'region', 'country', 'postal_code']

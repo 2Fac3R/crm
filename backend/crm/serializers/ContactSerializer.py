@@ -10,5 +10,5 @@ from rest_framework import serializers
 class ContactSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Contact
-        fields = ['url', 'organization', 'first_name', 'last_name', 'email',
+        fields = ['id', 'url', 'organization', 'first_name', 'last_name', 'email',
                   'phone', 'address', 'city', 'region', 'country', 'postal_code']
