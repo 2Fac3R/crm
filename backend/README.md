@@ -148,6 +148,17 @@ You have access to the following API routes:
     http://127.0.0.1:8000/api/v1/contacts/
     http://127.0.0.1:8000/api/v1/meetings/
 
+## Tests
+
+You can run all tests
+
+    python3 manage.py test
+
+Or individually
+
+    python3 manage.py test crm.tests.test_<model_in_plural>
+    python3 manage.py test crm.tests.test_organizations
+    ...
 
 ## Description
 
@@ -162,8 +173,7 @@ I decided to use the following packages:
 You can find more details about others in *requirements.txt* file.
 
 ## TODO:
-* Add tests.
-* Extra Web/React and/or Mobile/React Native app.
+* Extra Web/React (in progress) or Mobile/React Native app.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
