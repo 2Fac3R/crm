@@ -10,7 +10,7 @@ from rest_framework import status
 from ..models import Organization, Project, Contact, Meeting
 
 
-class meetingTestCase(APITestCase):
+class MeetingTestCase(APITestCase):
     def setUp(self):
         self.user = User.objects.create_user(username="test", password="test")
         self.org = Organization.objects.create()
