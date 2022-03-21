@@ -1,5 +1,6 @@
 # Django
 from django.urls import reverse
+from django.conf import settings
 from django.contrib.auth.models import User
 
 # Django Rest Framework
@@ -99,3 +100,13 @@ class ProjectTestCase(APITestCase):
         response = self.client.delete(
             reverse('project-detail', args=(project.pk,)))
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_pagination_is_fifteen(self):
+        """Test pagination is exactly fifteen."""
+        self.client.force_authenticate(user=self.user)
+        for x in range(30):
+            Project.objects.create(organization=self.org)
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            len(response.data['results']), settings.REST_FRAMEWORK['PAGE_SIZE'])
