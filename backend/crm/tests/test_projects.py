@@ -110,3 +110,14 @@ class ProjectTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
             len(response.data['results']), settings.REST_FRAMEWORK['PAGE_SIZE'])
+
+    def test_search(self):
+        """Test searching functionality."""
+        self.client.force_authenticate(user=self.user)
+        Project.objects.create(
+            organization=self.org,
+            name="asd"
+        )
+        projects = Project.objects.filter(name='asd')
+        response = self.client.get(self.url, {'search': 'asd'})
+        self.assertEqual(len(response.data['results']), projects.count())

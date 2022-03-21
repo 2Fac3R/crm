@@ -124,3 +124,14 @@ class ContactTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
             len(response.data['results']), settings.REST_FRAMEWORK['PAGE_SIZE'])
+
+    def test_search(self):
+        """Test searching functionality."""
+        self.client.force_authenticate(user=self.user)
+        Contact.objects.create(
+            organization=self.org,
+            email="email@example.com"
+        )
+        contacts = Contact.objects.filter(email='email@example.com')
+        response = self.client.get(self.url, {'search': 'email@example.com'})
+        self.assertEqual(len(response.data['results']), contacts.count())

@@ -7,6 +7,8 @@ from django.contrib.auth.models import User
 from rest_framework.test import APITestCase
 from rest_framework import status
 
+from crm.models.Meeting import Meeting
+
 # CRM
 from ..models import Organization
 
@@ -119,3 +121,13 @@ class OrganizationTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
             len(response.data['results']), settings.REST_FRAMEWORK['PAGE_SIZE'])
+
+    def test_search(self):
+        """Test searching functionality."""
+        self.client.force_authenticate(user=self.user)
+        Organization.objects.create(
+            name="asd"
+        )
+        organizations = Organization.objects.filter(name='asd')
+        response = self.client.get(self.url, {'search': 'asd'})
+        self.assertEqual(len(response.data['results']), organizations.count())

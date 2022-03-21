@@ -132,3 +132,17 @@ class MeetingTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
             len(response.data['results']), settings.REST_FRAMEWORK['PAGE_SIZE'])
+
+    def test_search(self):
+        """Test searching functionality."""
+        self.client.force_authenticate(user=self.user)
+        Meeting.objects.create(
+            project=self.project,
+            contact=self.contact,
+            title="asd",
+            description="string",
+            date="2019-08-24T14:15:22Z"
+        )
+        meetings = Meeting.objects.filter(title='asd')
+        response = self.client.get(self.url, {'search': 'asd'})
+        self.assertEqual(len(response.data['results']), meetings.count())
