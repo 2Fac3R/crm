@@ -7,8 +7,6 @@ from django.contrib.auth.models import User
 from rest_framework.test import APITestCase
 from rest_framework import status
 
-from crm.models.Meeting import Meeting
-
 # CRM
 from ..models import Organization
 
@@ -112,8 +110,8 @@ class OrganizationTestCase(APITestCase):
             reverse('organization-detail', args=(org.pk,)))
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
-    def test_pagination_is_fifteen(self):
-        """Test pagination is exactly fifteen."""
+    def test_pagination_is_settings_page_size(self):
+        """Test pagination is exactly settings page size."""
         self.client.force_authenticate(user=self.user)
         for x in range(30):
             Organization.objects.create()
