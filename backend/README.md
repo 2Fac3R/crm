@@ -1,6 +1,6 @@
-# Userlab - CRM
+# CRM
 
-This repository represents my implementation for the Full Stack JS Test applied by Userlab.
+This repository is a simple CRM RESTful API implementation using Django Rest Framework.
 
 ## Installation
 

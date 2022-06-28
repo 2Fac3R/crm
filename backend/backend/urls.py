@@ -45,7 +45,7 @@ router.register(r'meetings',
 # API Conf
 schema_view = get_schema_view(
     openapi.Info(
-        title="Userlab API",
+        title="CRM API",
         default_version='v1',
         description="API Documentation",
         terms_of_service="127.0.0.1/#",

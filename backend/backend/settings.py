@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'userlab',
+        'NAME': 'crm',
         'USER': 'postgres',
         'PASSWORD': 'Password1_',
         'HOST': 'localhost',
