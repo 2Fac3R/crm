@@ -9,10 +9,9 @@ from django.contrib import admin
 
 # Routes
 urlpatterns = [
+    # CRM
+    path('crm/', include('crm.urls')),
     # Auth
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    # API
-    path('api-auth/', include('rest_framework.urls')),
-    path('api/v1/', include('crm.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
