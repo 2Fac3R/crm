@@ -34,7 +34,7 @@ Run the server
 
     python3 manage.py runserver
 
-You can now access the API at http://127.0.0.1:8000/api/v1/
+You can now access the API at http://127.0.0.1:8000/crm/api/v1/
 
 If you want to have fake data to work with, seed the database using fixtures:
 
@@ -96,7 +96,7 @@ Pagination:
 
 In order to use the API, you need to have a token session. Get one at the following endpoint:
 
-    http://127.0.0.1:8000/api/v1/token/
+    http://127.0.0.1:8000/crm/api/token/
 
 Body (json):
 
@@ -109,7 +109,7 @@ This way you get 2 tokens, "refresh" and "access" tokens.
 
 Use access token on your API requests, and refresh token to get a new one if your access token is expired.    
 
-    http://127.0.0.1:8000/api/v1/token/refresh/
+    http://127.0.0.1:8000/crm/api/token/refresh/
 
 Body (json):
 
@@ -125,19 +125,19 @@ Remember to **send the token session on each request**.
 
 API Documentation:
 
-    http://127.0.0.1:8000/api/v1/swagger
-    http://127.0.0.1:8000/api/v1/redoc
+    http://127.0.0.1:8000/crm/api/swagger
+    http://127.0.0.1:8000/crm/api/redoc
 
 I recommend to test the API using swagger documentation web app.
 
 You have access to the following API routes:
 
-    http://127.0.0.1:8000/api/v1/users/
-    http://127.0.0.1:8000/api/v1/groups/
-    http://127.0.0.1:8000/api/v1/organizations/
-    http://127.0.0.1:8000/api/v1/projects/
-    http://127.0.0.1:8000/api/v1/contacts/
-    http://127.0.0.1:8000/api/v1/meetings/
+    http://127.0.0.1:8000/crm/api/v1/users/
+    http://127.0.0.1:8000/crm/api/v1/groups/
+    http://127.0.0.1:8000/crm/api/v1/organizations/
+    http://127.0.0.1:8000/crm/api/v1/projects/
+    http://127.0.0.1:8000/crm/api/v1/contacts/
+    http://127.0.0.1:8000/crm/api/v1/meetings/
 
 ## Tests
 
