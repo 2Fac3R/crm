@@ -17,18 +17,9 @@ Install requirements. Use the package manager [pip](https://pip.pypa.io/en/stabl
 
     pip install -r requirements.txt
 
-Configure database settings.py to use PostgreSQL
+Configure database in .env file (rename .env.example to .env)
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': '<databasename>',
-            'USER': '<username>',
-            'PASSWORD': '<password>',
-            'HOST': '127.0.0.1',
-            'PORT': '5432',
-        }
-    }
+    DATABASE_URL=psql://user:password@host:5432/database
 
 Make migrations and migrate
 
@@ -134,8 +125,8 @@ Remember to **send the token session on each request**.
 
 API Documentation:
 
-    http://127.0.0.1:8000/swagger
-    http://127.0.0.1:8000/redoc
+    http://127.0.0.1:8000/api/v1/swagger
+    http://127.0.0.1:8000/api/v1/redoc
 
 I recommend to test the API using swagger documentation web app.
 
